@@ -5,9 +5,9 @@ import cv2
 d = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_5X5_100)
 detector = cv2.aruco.ArucoDetector(d, cv2.aruco.DetectorParameters())
 
-cap = cv2.VideoCapture(1, cv2.CAP_MSMF)
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+cap = cv2.VideoCapture(1, cv2.CAP_DSHOW)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
 while True:
     ok, f = cap.read()
